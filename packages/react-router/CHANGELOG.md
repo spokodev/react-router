@@ -1,5 +1,15 @@
 # `react-router`
 
+## v8.2.0
+
+### Patch Changes
+
+- Fix incorrect dynamic param extraction when optional static segments are present ([#15200](https://github.com/remix-run/react-router/pull/15200))
+  - When a route path contains optional static segments (e.g. `/school?/user/:id`), the internal regex's incorrectly shifted parameter indices resulting in incorrect parameter extraction
+  - Consecutive optional static segments (e.g. `/one?/two?`) were only partially handled
+- Preserve navigation blocker state through a revalidation ([#15246](https://github.com/remix-run/react-router/pull/15246))
+- Update to use ReactFormState types instead of unknown. ([#15263](https://github.com/remix-run/react-router/pull/15263))
+
 ## v8.1.0
 
 ### Minor Changes
